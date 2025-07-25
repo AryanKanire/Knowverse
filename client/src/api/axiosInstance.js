@@ -2,6 +2,7 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
   baseURL: "https://knowverse-backend.onrender.com",
+  withCredentials: true
 });
 
 axiosInstance.interceptors.request.use(config=>{
