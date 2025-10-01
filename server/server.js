@@ -9,6 +9,7 @@ const studentViewCourseRoutes = require("./routes/student-routes/course-routes")
 const studentViewOrderRoutes = require("./routes/student-routes/order-routes");
 const studentViewCoursesRoutes = require("./routes/student-routes/student-courses-route");
 const studentCourseProgressRoutes = require("./routes/student-routes/course-progress-routes")
+const aiRoutes = require("./routes/ai-routes/index");
 
 
 dotenv.config();
@@ -35,6 +36,7 @@ app.use("/student/course",studentViewCourseRoutes);
 app.use("/student/order",studentViewOrderRoutes);
 app.use("/student/courses-bought",studentViewCoursesRoutes);
 app.use("/student/course-progress", studentCourseProgressRoutes);
+app.use("/ai", aiRoutes);
 
 
 app.listen(port,() => {
